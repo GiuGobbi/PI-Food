@@ -7,7 +7,7 @@
 
 .box{
     text-align: center; 
-    background-color:  rgb(82, 75, 75);;
+    background-color:  rgb(82, 75, 75);
     width: 400px;
     height: 450px;
     border-radius: 10px;
@@ -20,10 +20,10 @@
 }
 
 .detaildiv {
-    display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: space-evenly;
+    display: flex;                  
+    flex-direction: row;           
+    flex-wrap: nowrap;             
+    justify-content: space-evenly;
 }
 
 .titulito{
@@ -34,9 +34,10 @@
 }
 
 .arrays{
-    display: flex;                  /* establish flex container */
+    display: flex;                  
     flex-direction: column;
-    padding-bottom: 0;
+    border-radius: 10px;
+    padding-bottom: 5px;
     flex-wrap: nowrap;
     align-content: flex-start;
     margin-bottom: 0ch;

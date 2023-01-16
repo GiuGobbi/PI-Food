@@ -1,5 +1,19 @@
 .boton{
-    background: rgb(53, 50, 50);
+    background: rgb(82, 75, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
     color: beige;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.inputSearch{
+    padding:3px;
+    margin:10px 0;
+    border: 1px solid;
     border-radius: 5px;
+    border-color: rgb(82, 75, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
 }

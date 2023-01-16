@@ -138,15 +138,17 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { postRecipe, getDiets } from '../../redux/actions';
+import HomeButton from '../HomeButton/HomeButton.js';
+import styles from "./createrecipe.module.css"
 
-// eslint-disable-next-line no-useless-escape
 const imgRegexp = new RegExp('^https?:\/\/.+\.(jpg|jpeg|png|webp|avif|gif|svg)$')
 const isBlankSpace = new RegExp("^\\s+$")
 
-// cb
+
 function validateText ({ name, summary, healthScore, image, dishTypes }) {
   const err = {}
-
+  
+  //obligatorios
   if (!name) err.name = 'Write the name'
   else if (isBlankSpace.test(name)) err.name = "Shouldn't be a blank space"
   else if (name.trim().length > 50) err.name = `Maximum number of characters: 50 (${name.trim().length}/50)`
@@ -155,7 +157,7 @@ function validateText ({ name, summary, healthScore, image, dishTypes }) {
   else if (isBlankSpace.test(summary)) err.summary = "Shouldn't be a blank space"
   else if (summary.trim().length < 10) err.summary = `Minimum number of characters: 10 (${summary.trim().length}/10)`
 
-  // optionals
+  //opcionales
   if (healthScore && (healthScore > 100 || healthScore < 0)) err.healthScore = 'Should be a number between 0 and 100'
   else if (healthScore && isNaN(healthScore)) err.healthScore = 'Should be a number'
 
@@ -166,8 +168,7 @@ function validateText ({ name, summary, healthScore, image, dishTypes }) {
 }
 
 // component
-function CreateRecipe () {
-  //me traigo las recipes para ver si el name ingresado del usuario ya existe. guardo todos los names en minús en un obj
+export default function CreateRecipe () {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -226,53 +227,50 @@ function CreateRecipe () {
   }, [dispatch])
 
   return (
-    <div >
-      <div >
-        <h1 >Complete the form below to create your own recipe!</h1>
-        <h5 >Fields marked with <span>*</span> are required</h5>
+      <div className={styles.maindiv} >
+        <HomeButton/>
+        <h1 className={styles.titulo}>Complete the form below to create your own recipe!</h1>
+        <h5 className={styles.titulo}>Fields marked with * are required</h5>
 
-        <form onSubmit={handleSubmit}>
-          <label >Name <span>*</span></label>
-          <input value={input.name} name='name' onChange={handleChange} type='text' placeholder='Name' />
+        <form className={styles.formulario} onSubmit={handleSubmit}>
+          <label className={styles.label}>Name *</label>
+          <input className={styles.inputtag} value={input.name} name='name' onChange={handleChange} type='text' placeholder='Name' />
           {err.name && <p >{err.name}</p>}
           
-          <label >Summary <span >*</span></label>
-          <textarea value={input.summary} name='summary' onChange={handleChange} placeholder='Summary' />
+          <label className={styles.label}>Summary *</label>
+          <textarea className={styles.texttag} value={input.summary} name='summary' onChange={handleChange} placeholder='Summary' />
           {err.summary && <p >{err.summary}</p>}
           
-          <label >Health Score</label>
-          <input value={input.healthScore} name='healthScore' onChange={handleChange} type='text' placeholder='Health Score (0 - 100%)' />
+          <label className={styles.label} >Health Score</label>
+          <input className={styles.inputtag} value={input.healthScore} name='healthScore' onChange={handleChange} type='text' placeholder='Health Score (0 - 100%)' />
           {err.healthScore && <p >{err.healthScore}</p>}
           
-          <label >Step by step</label>
-          <textarea value={input.stepByStep} name='stepByStep' onChange={handleChange} placeholder='Step by step' />
+          <label className={styles.label}>Step by step</label>
+          <textarea className={styles.texttag} value={input.stepByStep} name='stepByStep' onChange={handleChange} placeholder='Step by step' />
           
-          <label>Image</label>
-          <input value={input.image} name='image' onChange={handleChange} type='text' placeholder='Image URL' />
+          <label className={styles.label}>Image</label>
+          <input className={styles.inputtag} value={input.image} name='image' onChange={handleChange} type='text' placeholder='Image URL' />
           {err.image && <p >{err.image}</p>}
 
-          <label>Type of dish</label>
-          <input type="text" name="dishTypes" placeholder="Dish Type" value={input.dishTypes} onChange={handleChange}/>
+          <label className={styles.label}>Type of dish</label>
+          <input className={styles.inputtag} type="text" name="dishTypes" placeholder="Dish Type" value={input.dishTypes} onChange={handleChange}/>
           {err.dishTypes && <p >{err.dishTypes}</p>}
 
-          <label>Diet</label>
+          <label className={styles.label}>Diet</label>
           <select onChange={handleSelectDiet} defaultValue='DEFAULT'>
             <option value="DEFAULT" disabled>--select type of diet--</option>
             {diets.map(diet => <option value={diet.name} key={diet.id}>{diet.name}</option>)}
           </select>
           <ul >
             {selectedDiet.map((diet,id) => 
-              <li  key={id}>
+              <li className={styles.lista}  key={id}>
                 {diet}
-                <button  value={diet} onClick={handleDeleteDiet}>X</button>
+                <button className={styles.deselect} value={diet} onClick={handleDeleteDiet}>x</button>
               </li>
             )}
           </ul>
-          <button disabled={isButtonDisabled()} type='submit'>Submit recipe</button>
+          <button className={styles.submit} disabled={isButtonDisabled()} type='submit'>Submit recipe</button>
         </form>
       </div>
-    </div>
   );
 }
-
-export default CreateRecipe;

@@ -22,6 +22,7 @@ export default function Nav() {
         <div>
         <form onSubmit={(e) => handleSubmit(e)}>
                 <input
+                    className={styles.inputSearch}
                     type="text"
                     placeholder="Search recipe..."
                     value={name}

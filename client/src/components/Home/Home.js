@@ -9,6 +9,7 @@ import Pagination from "../Pagination/Pagination.js"
 import Recipes from "../Recipes/Recipes.js";
 import CreateButton from "../CreateButton/CreateButton.js"
 import styles from "./home.module.css"
+import image from "../../logo.png"
 
 
 export default function Home() {
@@ -48,14 +49,15 @@ export default function Home() {
             <CreateButton/>
             <button className={styles.refresh} onClick={handleRefresh}>Refresh page</button>
           </div>
-          <h1>Find your favorite recipes</h1>
+          <img className={styles.imagen} src={image} alt=""/>
+          <h1 className={styles.tituloMain}>Find your favorite recipes</h1>
           <div className={styles.filtersDiv}>
             <FilterDiet/>
             <SortRecipes setCurrentPage={setCurrentPage}/>
           </div>
         </div>
         <br/>
-        <div className={styles.container}>
+        <div>
           <Recipes recipes={recipesShown}/>
         </div>
         <Pagination recipes={allRecipes.length} reciperPerPage={recipesPerPage} paginate={paginate}/>

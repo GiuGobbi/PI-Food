@@ -1,0 +1,28 @@
+
+select {
+    appearance: none;
+    background-color: beige;
+    border: 1px solid;
+    border-color: rgb(82, 75, 75);
+    padding: 0 1em 0 0;
+    margin: 2px;
+    width: 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
+    color: rgb(82, 75, 75);
+    cursor: inherit;
+    line-height: inherit;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+ 
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+
+}

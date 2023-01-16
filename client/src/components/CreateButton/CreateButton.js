@@ -8,6 +8,6 @@ const handleOnClick= () => {
     navigate("/create")
 }
     return (
-        <button className={styles.boton} onClick={handleOnClick}>Submit your recipe</button>
+        <button className={styles.boton} onClick={handleOnClick}>Create your recipe</button>
     )
 };

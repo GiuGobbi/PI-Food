@@ -1,0 +1,106 @@
+.titulo1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color:  rgb(82, 75, 75);
+}
+
+.titulo2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color:  rgb(82, 75, 75);
+}
+
+.titulo3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color:  rgb(82, 75, 75);
+}
+
+
+.liItem{
+    list-style-type: none;
+}
+
+.arrays{
+    display: flex;                  
+    flex-direction: column;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    margin-bottom: 0ch;
+    margin-top: 0ch;
+}
+
+.imagenDetail{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: rgb(82, 75, 75);
+    float: right;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.divdiets{
+    float: right;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color: rgb(82, 75, 75);
+    width: 150px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    clear: both;
+    margin-left: 30px;
+    margin-right: 45px;
+    border-radius: 10px;
+}
+
+.divtypes{
+    float: right;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color: rgb(82, 75, 75);
+    height: 250px;
+    width: 150px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.pasoapasoDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 60%;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color: rgb(82, 75, 75);
+}
+
+.pasoapaso{
+    text-align: left;
+}
+
+.listaEntera{
+    padding: 0;
+}
+
+.summaryDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 60%;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color: rgb(82, 75, 75);
+} 
+
+.summary{
+    text-align: justify;
+    text-justify:inter-word;
+} 

@@ -4,9 +4,9 @@ import React from 'react';
 //import Cards from './components/Cards/Cards.jsx';
 import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home/Home.js";
-import LandingPage from './components/LandingPage.js';
+import LandingPage from './components/LandingPage/LandingPage.js';
 import {BrowserRouter} from "react-router-dom"
-import Detail from "./components/Detail.js"
+import Detail from "./components/Detail/Detail.js"
 import CreateRecipe from "./components/CreateRecipe/CreateRecipe.js"
 
 function App() {
