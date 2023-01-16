@@ -22,31 +22,32 @@ router.get("/", async(req, res) => {
   
 
 router.get("/:id", async(req, res) => {
-    try {
-        const id = req.params.id
-        const allInfo = await mergeAllRecipes()
-        const recipeDetail = allInfo.find(recipe => recipe.id === id)
 
-        if (recipeDetail) {
-            res.status(200).send(recipeDetail)
-        } else {
+        const {id} = req.params
+        const allInfo = await mergeAllRecipes();
+        // console.log(allInfo.find((rec) => rec.id.toString() == id))
+
+        if (id) {
+            const recipeDetail = allInfo.find((rec) => rec.id.toString() == id);
+            recipeDetail? 
+            res.status(200).json(recipeDetail):
             res.status(404).send('Recipe not found')
+        } else {
+            res.status(400).send("Something went wrong")
         }
-      } catch (err) {
-        console.log("Error:" + err)
-        res.status(400).send('Something went wrong')
-      }
 });
 
 router.post("/", async(req, res) => {
-    const {name, summary, healthScore, stepByStep, diets} = req.body;
+    const {name, summary, image, healthScore, dishTypes, stepByStep, diets} = req.body;
 
         if (name && summary) {
             var newRecipe = await Recipe.create({
                 name: name,
                 summary: summary,
                 stepByStep: stepByStep? stepByStep : null,
+                dishTypes: dishTypes ? dishTypes: null,
                 healthScore: healthScore, 
+                image: image
             });
         
          if (diets.length !== 0) {

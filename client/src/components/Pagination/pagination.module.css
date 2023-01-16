@@ -1,0 +1,18 @@
+.list{
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.listA {
+    color: beige;
+    padding: 7px;
+    background: rgb(53, 50, 50);
+    margin: 2px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}

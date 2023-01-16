@@ -1,9 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeButton() {
+    const navigate = useNavigate();
+    const handleOnClick = () => {
+        navigate("/home")
+    }
     return (
-    <Link to={"/home"}>HOME</Link>
+        <button onClick={handleOnClick}>return</button>
     )
-}
+};
 

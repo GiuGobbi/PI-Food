@@ -1,5 +1,6 @@
 import axios from "axios"; 
 
+
 export function getRecipes() {
     return async function (dispatch) {
         const res = await axios.get("http://localhost:3001/recipes")
@@ -31,7 +32,7 @@ export function searchByName (name) {
       } catch (e) {
         dispatch({
           type: "SEARCH_BY_NAME",
-          payload: e.response.data
+          payload: e
         })
       }
     }
@@ -74,4 +75,18 @@ export function getDetail (id) {
       }
     }
 };
+export function postRecipe (newRecipe) {
+  return async function (dispatch) {
+    try {
+      const res = await axios.post(`http://localhost:3001/recipes`, newRecipe)
+      alert(res.data)
+      dispatch({
+        type: 'POST_RECIPE',
+        payload: res.config.data
+      })
+    } catch (e) {
+      alert(e)
+    }
+  }
+}
 

@@ -1,0 +1,27 @@
+.refresh{
+    background: rgb(53, 50, 50);
+    color: beige;
+    border-radius: 5px;
+    float: right;
+}
+
+.encabezado{
+    border-bottom: 2px solid;
+    border-color:  rgb(53, 50, 50);
+    padding-bottom: 20px;
+}
+
+.searchDiv {
+    text-align: right;
+    padding: 10px;
+}
+
+.filtersDiv{
+    text-align: left;
+    padding: 10px;
+}
+
+.createDiv{
+    text-align: left;
+    padding: 10px;
+}

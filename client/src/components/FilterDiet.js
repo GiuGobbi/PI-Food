@@ -9,8 +9,9 @@ export default function FilterDiet() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        if(!allDiets.length)
         dispatch(getDiets());
-    });
+    }, [allDiets, dispatch]);
 
     function handleChange(e) {
         e.preventDefault();
@@ -19,16 +20,14 @@ export default function FilterDiet() {
 
     return (
         <div>
-            <label>Choose your diet</label>
             <select onChange={handleChange}>
-                <option value="all">All</option>
-                {allDiets?.map((diet, key) => {
-                    return (
-                        <option key={key} value={diet.name}>{diet.name}</option>
-                    )
-                })}
+                <option value="all">--Choose your diet--</option>
+                {allDiets.map((diet) => { return (
+                    <option key={diet.id} value={diet.name}>
+                    {diet.name}
+                    </option>
+                )})}
             </select>
-
         </div>
     )
 }

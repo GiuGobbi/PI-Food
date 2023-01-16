@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import {searchByName} from "../redux/actions.js"
+import {searchByName} from "../../redux/actions.js"
 import { useDispatch } from "react-redux";
+import styles from "./nav.module.css"
 
 export default function Nav() {
     const dispatch = useDispatch();
@@ -11,24 +12,22 @@ export default function Nav() {
         setName(e.target.value)
     }
 
-
     function handleSubmit (e){
         e.preventDefault()
         dispatch(searchByName(name));
         setName('');
     }
 
-
     return (
         <div>
         <form onSubmit={(e) => handleSubmit(e)}>
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search recipe..."
                     value={name}
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                 />
-                <button type="submit">
+                <button className={styles.boton} type="submit">
                     Search
                 </button>
             </form>

@@ -1,8 +1,10 @@
 const {Diet} = require("../db");
 const {getApiRecipes} = require("./Recipes.js")
+const data = require('./apiData.json');
+
 
 const getAllDiets = async () => {
-    const apiRec = await getApiRecipes();
+    const apiRec = data
 
     const allDiets = apiRec.map(recipe => recipe.diets)
     //array of arrays
@@ -21,11 +23,8 @@ const getAllDiets = async () => {
             where: { name: diet },
         });
     })
-
-    console.log(arrayDietsFinal)
     let allDBDiets = await Diet.findAll()
-
-    return allDBDiets.map(diet => diet.name)
+    return allDBDiets
 };
 
 module.exports = getAllDiets
