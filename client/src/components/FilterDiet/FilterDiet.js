@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import {filterByDiet, getDiets} from "../redux/actions.js";
+import {filterByDiet, getDiets} from "../../redux/actions.js";
 import { useDispatch, useSelector } from "react-redux";
-
+import styles from "./filterdiet.module.css"
 
 export default function FilterDiet() {
 
@@ -20,7 +20,7 @@ export default function FilterDiet() {
 
     return (
         <div>
-            <select onChange={handleChange}>
+            <select className={styles.select} onChange={handleChange}>
                 <option value="all">--Choose your diet--</option>
                 {allDiets.map((diet) => { return (
                     <option key={diet.id} value={diet.name}>

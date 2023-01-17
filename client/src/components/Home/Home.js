@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {getRecipes} from "../../redux/actions.js";
 import Nav from "../Nav/Nav.js";
-import FilterDiet from "../FilterDiet.js";
+import FilterDiet from "../FilterDiet/FilterDiet";
 import SortRecipes from "../Sort/Sort.js";
 import Pagination from "../Pagination/Pagination.js"
 import Recipes from "../Recipes/Recipes.js";

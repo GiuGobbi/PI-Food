@@ -1,11 +1,15 @@
 .titulo1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color:  rgb(82, 75, 75);
+    position: relative;
+    left: 110px; 
 }
 
 .titulo2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color:  rgb(82, 75, 75);
+    position: relative;
+    left: 110px; 
 }
 
 .titulo3{
@@ -16,6 +20,15 @@
 
 .liItem{
     list-style-type: none;
+    margin-top: 0%;
+}
+
+.divTitutlo{
+   width: 50%;
+   position: relative;
+   top: 45px;
+   display: flex;
+   flex-direction: column;
 }
 
 .arrays{
@@ -30,8 +43,10 @@
 }
 
 .imagenDetail{
-    width: 350px;
-    height: 250px;
+    width: 25%;
+    height: 20%;
+    position: relative;
+    bottom: 70px;
     border-radius: 10px;
     border: 2px solid;
     border-color: rgb(82, 75, 75);
@@ -39,7 +54,6 @@
     margin-right: 40px;
     margin-left: 20px;
     margin-bottom: 10px;
-    margin-top: 50px;
 }
 
 .divdiets{
@@ -49,13 +63,14 @@
     flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color: rgb(82, 75, 75);
-    width: 150px;
+    width: 12%;
     height: 250px;
     text-align: center;
     align-items: center;
     clear: both;
-    margin-left: 30px;
-    margin-right: 45px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-bottom: 20px;
     border-radius: 10px;
 }
 
@@ -67,7 +82,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color: rgb(82, 75, 75);
     height: 250px;
-    width: 150px;
+    width: 12%;
     align-items: center;
     border-radius: 10px;
 }
@@ -75,15 +90,18 @@
 .pasoapasoDiv{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 45px;
+    margin-top: 0;
     margin-left: 40px;
     width: 60%;
-    align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color: rgb(82, 75, 75);
 }
 
 .pasoapaso{
     text-align: left;
+    margin-top: 0;
 }
 
 .listaEntera{
@@ -93,7 +111,10 @@
 .summaryDiv{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 45px;
     margin-left: 40px;
+    margin-bottom: 0;
     width: 60%;
     align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;

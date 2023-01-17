@@ -1,7 +1,8 @@
 .boton{
-    background: rgb(53, 50, 50);
+    background: rgb(82, 75, 75);
     color: beige;
     border-radius: 5px;
-    font-family: le-monde-livre-classic-byol, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 30px;
 }
 

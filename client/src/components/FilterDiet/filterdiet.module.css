@@ -1,0 +1,14 @@
+.select {
+    background-color: white;
+    border: thin solid rgb(82, 75, 75);
+    color:rgb(82, 75, 75);
+    font-size: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
+    margin: 3px;      
+    box-sizing: border-box;
+  }

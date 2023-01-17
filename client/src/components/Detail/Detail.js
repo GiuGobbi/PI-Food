@@ -17,12 +17,10 @@ useEffect(() => {
 return (
         <div>
             <HomeButton/>
-            <br/>
             <div>
-                <br/>
-                <div>
+                <div className={styles.divTitutlo}>
                     <h1 className={styles.titulo1}>{detail.name}</h1>
-                    <h2 className={styles.titulo2}>{detail.healthScore}</h2>
+                    <h2 className={styles.titulo2}>Health score: {detail.healthScore}</h2>
                 </div>
                 <img className={styles.imagenDetail} src={detail.image} alt="mmmm"></img>
                 <br/>
@@ -36,7 +34,6 @@ return (
                     {detail.diets?.map((diet, index)=> <li className={styles.liItem} key={index}>{diet}</li>)}
                     </ul>
                 </div>
-                <br/>
                 <div className={styles.divtypes}>
                 <h3>Type of dish</h3>
                     <ul className={styles.listaEntera}>
@@ -45,7 +42,7 @@ return (
                 </div>
                 <div className={styles.pasoapasoDiv}>
                     <h3>Step by step</h3>
-                    <p>{detail.stepByStep?.map((step, index) => <p className={styles.pasoapaso}>{index+1}- {step}</p>)}</p>
+                    <p className={styles.pasoapaso}>{detail.stepByStep?.map((step, index) => <p>{index+1}- {step}</p>)}</p>
                 </div>
             </div>
         </div>
