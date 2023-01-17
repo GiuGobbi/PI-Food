@@ -1,0 +1,16 @@
+.errorh1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    color: rgb(251,203,12);
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+}
+
+.container{
+    border: 2px solid;
+    border-color: rgb(53, 50, 50);
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    height: 200px;
+}

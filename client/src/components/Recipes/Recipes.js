@@ -2,6 +2,7 @@ import RecipeCard from "../RecipeCard/RecipeCard.js";
 import styles from "./recipes.module.css";
 
 export default function Recipes({recipes}) {
+
     return (
         <div className={styles.container}>
             {recipes?.map(recipe => 

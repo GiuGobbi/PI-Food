@@ -46,6 +46,7 @@ const getDBRecipes = async () => {
 const mergeAllRecipes = async () => {
         // const apiRec = await getApiRecipes();
         const dbRec = await getDBRecipes();
+        // const allRec = apiRec.concat(dbRec);
         const allRec = data.concat(dbRec);
         return allRec;
 };

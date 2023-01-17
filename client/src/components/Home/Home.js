@@ -8,6 +8,7 @@ import SortRecipes from "../Sort/Sort.js";
 import Pagination from "../Pagination/Pagination.js"
 import Recipes from "../Recipes/Recipes.js";
 import CreateButton from "../CreateButton/CreateButton.js"
+import Error404 from "../Error404/Error404.js"
 import styles from "./home.module.css"
 import image from "../../logo.png"
 
@@ -28,6 +29,7 @@ export default function Home() {
   const indexOfLastRec = currentPage * recipesPerPage;
   const indexOfFirstRec = indexOfLastRec - recipesPerPage;
   const recipesShown = allRecipes.slice(indexOfFirstRec, indexOfLastRec) 
+  console.log(recipesShown)
  
   //acomodar Pagination
   const paginate = (pageNumber) => {
@@ -58,7 +60,7 @@ export default function Home() {
         </div>
         <br/>
         <div>
-          <Recipes recipes={recipesShown}/>
+          {Array.isArray(recipesShown)? <Recipes recipes={recipesShown}/> : <Error404/>}
         </div>
         <Pagination recipes={allRecipes.length} reciperPerPage={recipesPerPage} paginate={paginate}/>
       </div>

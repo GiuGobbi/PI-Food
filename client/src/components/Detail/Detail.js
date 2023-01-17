@@ -22,7 +22,7 @@ return (
                     <h1 className={styles.titulo1}>{detail.name}</h1>
                     <h2 className={styles.titulo2}>Health score: {detail.healthScore}</h2>
                 </div>
-                <img className={styles.imagenDetail} src={detail.image} alt="mmmm"></img>
+                <img className={styles.imagenDetail} src={detail.image} alt="image not available"></img>
                 <br/>
                 <div className={styles.summaryDiv}>
                     <h3>Summary</h3>

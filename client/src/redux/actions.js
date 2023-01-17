@@ -32,7 +32,7 @@ export function searchByName (name) {
       } catch (e) {
         dispatch({
           type: "SEARCH_BY_NAME",
-          payload: e
+          payload: e.response.data
         })
       }
     }
