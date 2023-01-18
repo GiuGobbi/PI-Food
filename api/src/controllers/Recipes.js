@@ -4,7 +4,7 @@ const {API_KEY_1, API_KEY_2, API_KEY_3, API_KEY_4, API_KEY_5} = process.env;
 const data = require('./apiData.json');
 
 const getApiRecipes = async () => {
-    const res = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_1}&addRecipeInformation=true&number=100`)
+    const res = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`)
     
     const apiInfo = await res.data.results.map(recipe => {
       return {
@@ -40,9 +40,9 @@ const getDBRecipes = async () => {
 };
 
 const mergeAllRecipes = async () => {
-        // const apiRec = await getApiRecipes();
+        //const apiRec = await getApiRecipes();
         const dbRec = await getDBRecipes();
-        // const allRec = apiRec.concat(dbRec);
+        //const allRec = apiRec.concat(dbRec);
         const allRec = data.concat(dbRec);
         return allRec;
 };

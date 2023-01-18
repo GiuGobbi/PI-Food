@@ -33,7 +33,7 @@ export function searchByName (name) {
       } catch (e) {
         dispatch({
           type: "SEARCH_BY_NAME",
-          payload: e.response.data
+          payload: e.response
         })
       }
     }

@@ -23,12 +23,12 @@ export default function Home() {
   
 
   useEffect(() => {
-    !allRecipes.length && dispatch(getRecipes())
+    if(allRecipes.length === 0) dispatch(getRecipes())
   }, [dispatch])
 
   const indexOfLastRec = currentPage * recipesPerPage;
   const indexOfFirstRec = indexOfLastRec - recipesPerPage;
-  const recipesShown = allRecipes.slice(indexOfFirstRec, indexOfLastRec) 
+  const recipesShown = allRecipes?.slice(indexOfFirstRec, indexOfLastRec) 
  
   //acomodar Pagination
   const paginate = (pageNumber) => {
@@ -37,9 +37,10 @@ export default function Home() {
 
   const handleRefresh = (e) => {
     e.preventDefault()
+    dispatch(getRecipes())
     window.location.reload(false)
   }
-  
+
     return (
       <div>
         <div className={styles.encabezado}>
