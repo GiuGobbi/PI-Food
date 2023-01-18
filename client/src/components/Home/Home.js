@@ -23,13 +23,12 @@ export default function Home() {
   
 
   useEffect(() => {
-      dispatch(getRecipes())
+    !allRecipes.length && dispatch(getRecipes())
   }, [dispatch])
 
   const indexOfLastRec = currentPage * recipesPerPage;
   const indexOfFirstRec = indexOfLastRec - recipesPerPage;
   const recipesShown = allRecipes.slice(indexOfFirstRec, indexOfLastRec) 
-  console.log(recipesShown)
  
   //acomodar Pagination
   const paginate = (pageNumber) => {
@@ -38,8 +37,7 @@ export default function Home() {
 
   const handleRefresh = (e) => {
     e.preventDefault()
-    dispatch(setCurrentPage(1))
-    dispatch(getRecipes())
+    window.location.reload(false)
   }
   
     return (
@@ -60,9 +58,9 @@ export default function Home() {
         </div>
         <br/>
         <div>
-          {Array.isArray(recipesShown)? <Recipes recipes={recipesShown}/> : <Error404/>}
+          {Array.isArray(recipesShown)? <Recipes recipes={recipesShown}/> : <Error404 error={recipesShown}/>}
         </div>
-        <Pagination recipes={allRecipes.length} reciperPerPage={recipesPerPage} paginate={paginate}/>
+        {Array.isArray(recipesShown)? <Pagination recipes={allRecipes.length} reciperPerPage={recipesPerPage} paginate={paginate}/> : <p></p>}
       </div>
     )    
 };

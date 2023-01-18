@@ -5,8 +5,10 @@
     font-size: 15px;
     width: fit-content;
     padding: 5px;
-    border-radius: 10px;
     float: right;
     margin-right: 40px;
     margin-top: 10px;
+    border-radius: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }

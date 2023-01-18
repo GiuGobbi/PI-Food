@@ -4,5 +4,8 @@
     border-radius: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     font-size: 30px;
+    border-radius: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }
 

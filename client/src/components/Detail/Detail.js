@@ -22,14 +22,14 @@ return (
                     <h1 className={styles.titulo1}>{detail.name}</h1>
                     <h2 className={styles.titulo2}>Health score: {detail.healthScore}</h2>
                 </div>
-                <img className={styles.imagenDetail} src={detail.image} alt="image not available"></img>
+                <img className={styles.imagenDetail} src={detail.image} alt={detail.name}></img>
                 <br/>
                 <div className={styles.summaryDiv}>
                     <h3>Summary</h3>
                     <p className={styles.summary}>{detail.summary?.replace(/<[^>]*>/g, '')}</p>
                 </div>
-                <div className={styles.divdiets}>
-                    <h3 className={styles.titulo3}>Types of diets</h3>
+               <div className={styles.divdiets}>
+                <h3>Type of dish</h3>
                     <ul className={styles.listaEntera}>
                     {detail.diets?.map((diet, index)=> <li className={styles.liItem} key={index}>{diet}</li>)}
                     </ul>

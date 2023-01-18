@@ -25,6 +25,7 @@ export function searchByName (name) {
     return async function (dispatch) {
       try {
         const res = await axios.get(`http://localhost:3001/recipes?name=${name}`)
+        console.log(res.data)
         dispatch({
           type: "SEARCH_BY_NAME",
           payload: res.data

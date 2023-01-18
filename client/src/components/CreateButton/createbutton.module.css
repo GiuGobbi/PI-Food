@@ -4,4 +4,7 @@
     font-size: 15px;
     color: beige;
     border-radius: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
+    margin-right: 5px;
 }

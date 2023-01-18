@@ -1,6 +1,6 @@
 .formulario{
     width:400px;
-    height: 600px;
+    height:fit-content;
     padding:20px;
     border: 2px solid;
     border-color: rgb(82, 75, 75);
@@ -44,6 +44,7 @@
 .label{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     font-size: 17px;
+    font-weight: bold;
     color:  rgb(82, 75, 75);
 }
 
@@ -55,7 +56,9 @@
     width: fit-content;
     margin: auto;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }
 
 input:focus { 
@@ -105,5 +108,13 @@ textarea:focus {
     margin: 3px;      
     box-sizing: border-box;
   }
+
+.error{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
+    text-decoration: underline;
+    margin: 3px;    
+    color: rgb(187, 100, 14);
+}
   
   

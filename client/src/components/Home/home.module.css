@@ -4,7 +4,8 @@
     font-size: 15px;
     color: beige;
     border-radius: 10px;
-    float: right;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }
 
 .encabezado{

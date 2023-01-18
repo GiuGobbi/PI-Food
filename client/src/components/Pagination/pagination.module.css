@@ -7,6 +7,7 @@
 .listA {
     color: beige;
     padding: 7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     background: rgb(82, 75, 75);
     margin: 2px;
     font-weight: 600;

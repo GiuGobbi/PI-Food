@@ -64,7 +64,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color: rgb(82, 75, 75);
     width: 12%;
-    height: 250px;
+    height: 230px;
     text-align: center;
     align-items: center;
     clear: both;
@@ -81,7 +81,7 @@
     flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
     color: rgb(82, 75, 75);
-    height: 250px;
+    height: 230px;
     width: 12%;
     align-items: center;
     border-radius: 10px;

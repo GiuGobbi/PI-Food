@@ -9,7 +9,7 @@
     text-align: center; 
     background-color:  rgb(82, 75, 75);
     width: 400px;
-    height: 450px;
+    height: 490px;
     border-radius: 10px;
     align-items: center;
     align-self: center;
@@ -21,8 +21,7 @@
 
 .detaildiv {
     display: flex;                  
-    flex-direction: row;           
-    flex-wrap: nowrap;             
+    flex-direction: row;             
     justify-content: space-evenly;
 }
 

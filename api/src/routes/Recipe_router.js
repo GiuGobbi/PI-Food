@@ -13,7 +13,7 @@ router.get("/", async(req, res) => {
         if (results.length > 0) {
             res.status(200).json(results);
         } else {
-            res.status(404).send("404 - Recipe not found");
+            res.status(404).send("404-Recipe not found");
         }
     } else {
         res.status(200).json(allRecipes);
@@ -31,7 +31,7 @@ router.get("/:id", async(req, res) => {
             const recipeDetail = allInfo.find((rec) => rec.id.toString() == id);
             recipeDetail? 
             res.status(200).json(recipeDetail):
-            res.status(404).send('Recipe not found')
+            res.status(404).send("Recipe not found")
         } else {
             res.status(400).send("Something went wrong")
         }

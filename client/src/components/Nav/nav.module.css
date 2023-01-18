@@ -6,6 +6,8 @@
     padding: 3px;
     border-radius: 10px;
     margin-left: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }
 
 .inputSearch{

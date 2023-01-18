@@ -14,19 +14,19 @@ function validateText ({ name, summary, healthScore, image, dishTypes }) {
   
   //obligatorios
   if (!name) err.name = "Insert name"
-  else if (isBlankSpace.test(name)) err.name = "Shouldn't be a blank space"
+  else if (isBlankSpace.test(name)) err.name = "Invalid name"
   else if (name.trim().length > 50) err.name = `Maximum number of characters: 50 (${name.trim().length}/50)`
   
   if (!summary) err.summary = "Write a brief summary"
-  else if (isBlankSpace.test(summary)) err.summary = "Shouldn't be a blank space"
-  else if (summary.trim().length < 10) err.summary = `Minimum number of characters: 10 (${summary.trim().length}/10)`
+  else if (isBlankSpace.test(summary)) err.summary = "Invalid summary"
+  else if (summary.trim().length < 10) err.summary = `Minimum number of characters: 20 (${summary.trim().length}/20)`
 
   //opcionales
   if (healthScore && (healthScore > 100 || healthScore < 0)) err.healthScore = "HS should be a number between 0 and 100"
-  else if (healthScore && isNaN(healthScore)) err.healthScore = "HS should be a number"
+  else if (healthScore && isNaN(healthScore)) err.healthScore = "Please enter a number"
 
-  if (image && !imgRegexp.test(image.trim())) err.image = "Should be a valid URL"
-  if (dishTypes.trim().length > 30) err.dishTypes = "Maximum number of characters: 30"
+  if (image && !imgRegexp.test(image.trim())) err.image = "Please insert a valid URL"
+  if (dishTypes.trim().length > 50) err.dishTypes = "Maximum number of characters: 50"
   
   return err
 }
@@ -98,26 +98,25 @@ export default function CreateRecipe () {
         <form className={styles.formulario} onSubmit={handleSubmit}>
           <label className={styles.label}>Name *</label>
           <input className={styles.inputtag} value={input.name} name='name' onChange={handleChange} type='text' placeholder='Name' />
-          {err.name && <p >{err.name}</p>}
+          {err.name && <p className={styles.error} >{err.name}</p>}
           
           <label className={styles.label}>Summary *</label>
           <textarea className={styles.texttag} value={input.summary} name='summary' onChange={handleChange} placeholder='Summary' />
-          {err.summary && <p >{err.summary}</p>}
+          {err.summary && <p className={styles.error} >{err.summary}</p>}
           
           <label className={styles.label}>Health Score</label>
           <input className={styles.inputtag} value={input.healthScore} name='healthScore' onChange={handleChange} type='text' placeholder='Health Score (0 - 100%)' />
-          {err.healthScore && <p >{err.healthScore}</p>}
+          {err.healthScore && <p className={styles.error} >{err.healthScore}</p>}
           
           <label className={styles.label}>Step by step</label>
           <textarea className={styles.texttag} value={input.stepByStep} name='stepByStep' onChange={handleChange} placeholder='Step by step' />
           
           <label className={styles.label}>Image</label>
           <input className={styles.inputtag} value={input.image} name='image' onChange={handleChange} type='text' placeholder='Image URL' />
-          {err.image && <p >{err.image}</p>}
+          {err.image && <p className={styles.error}>{err.image}</p>}
 
           <label className={styles.label}>Type of dish</label>
           <input className={styles.inputtag} type="text" name="dishTypes" placeholder="Dish Type" value={input.dishTypes} onChange={handleChange}/>
-          {err.dishTypes && <p >{err.dishTypes}</p>}
 
           <label className={styles.label}>Diet</label>
           <select className={styles.select} onChange={handleSelectDiet} defaultValue='DEFAULT'>

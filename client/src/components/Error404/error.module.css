@@ -3,7 +3,8 @@
     color: rgb(251,203,12);
     font-weight: bold;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
+    margin: 0;
 }
 
 .container{
@@ -13,4 +14,15 @@
     margin: auto;
     width: 50%;
     height: 200px;
+}
+
+.back{
+    background: rgb(82, 75, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    font-size: 15px;
+    color: beige;
+    margin: 20px;
+    border-radius: 10px;
+    border-color: rgb(82, 75, 75);
+    border-style: solid;
 }

@@ -6,10 +6,11 @@ export default function Pagination({recipes, reciperPerPage, paginate}) {
     for (let i = 1; i <= Math.ceil(recipes/reciperPerPage); i++) {
         pages.push(i);
     }
+    
     return (
         <nav>
             <ul className={styles.list}>
-            {pages?.map((page) => { 
+            {pages.map((page) => { 
                 return (
                  <li className={styles.listItems} key={page}>
                  <a className={styles.listA} onClick={() => {paginate(page)}} href="#!">
