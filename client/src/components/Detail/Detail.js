@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HomeButton from "../HomeButton/HomeButton.js"
 import styles from "./detail.module.css"
+import { isObject, isEmpty } from "../../utils.js";
 
 export default function Detail() {
 const dispatch = useDispatch();
@@ -31,7 +32,9 @@ return (
                <div className={styles.divdiets}>
                 <h3>Type of dish</h3>
                     <ul className={styles.listaEntera}>
-                    {detail.diets?.map((diet, index)=> <li className={styles.liItem} key={index}>{diet}</li>)}
+                    {isEmpty(detail.diets) && !isObject(detail.diets[0])? 
+                        detail.diets?.map((diet, index)=> <li className={styles.liItem} key={index}>{diet}</li>): 
+                        detail.diets?.map((diet, index)=> <li className={styles.liItem} key={index}>{diet.name}</li>)}
                     </ul>
                 </div>
                 <div className={styles.divtypes}>

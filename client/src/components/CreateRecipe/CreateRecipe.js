@@ -74,7 +74,7 @@ export default function CreateRecipe () {
       name: input.name.trim(),
       summary: input.summary.trim(),
       healthScore: input.healthScore ? Math.floor(input.healthScore) : null,
-      stepByStep: input.stepByStep.trim() ? [input.stepByStep.trim()] : [],
+      stepByStep: input.stepByStep? input.stepByStep.split(".").map(step => `${step}.`): [],
       dishTypes: input.dishTypes.trim()? [input.dishTypes.trim()] : [],
       image: input.image.trim(),
       diets: selectedDiet

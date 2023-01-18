@@ -28,7 +28,7 @@ export default function Home() {
 
   const indexOfLastRec = currentPage * recipesPerPage;
   const indexOfFirstRec = indexOfLastRec - recipesPerPage;
-  const recipesShown = allRecipes?.slice(indexOfFirstRec, indexOfLastRec) 
+  const recipesShown = allRecipes.length? allRecipes.slice(indexOfFirstRec, indexOfLastRec):allRecipes
  
   //acomodar Pagination
   const paginate = (pageNumber) => {
