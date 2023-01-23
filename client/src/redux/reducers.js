@@ -40,7 +40,7 @@ const initialState = {
         };
 
     case "SORT_BY_NAME":
-        const copyAZ = [...state.allRecipes]
+        const copyAZ = [...state.recipes]
         const recipesSortedByName =
         action.payload === 'order A to Z' 
         ? copyAZ.sort((a, b) => {
@@ -59,7 +59,7 @@ const initialState = {
             };
 
     case "SORT_BY_HEALTHSCORE":
-      const copy = [...state.allRecipes];
+      const copy = [...state.recipes];
       const recipesSortedByHealthScore =
         action.payload === 'lowerHealthScore' 
           ? copy.sort((a, b) => {

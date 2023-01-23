@@ -3,7 +3,7 @@ import {searchByName} from "../../redux/actions.js"
 import { useDispatch } from "react-redux";
 import styles from "./nav.module.css"
 
-export default function Nav() {
+export default function Nav({paginate}) {
     const dispatch = useDispatch();
     const [name, setName] = useState("");
 
@@ -15,6 +15,7 @@ export default function Nav() {
     function handleSubmit (e){
         e.preventDefault()
         dispatch(searchByName(name));
+        paginate(1)
         setName('');
     }
 

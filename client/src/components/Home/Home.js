@@ -5,12 +5,13 @@ import {getRecipes} from "../../redux/actions.js";
 import Nav from "../Nav/Nav.js";
 import FilterDiet from "../FilterDiet/FilterDiet";
 import SortRecipes from "../Sort/Sort.js";
-import Pagination from "../Pagination/Pagination.js"
+import Pagination from "../Pagination/Pagination.js";
 import Recipes from "../Recipes/Recipes.js";
-import CreateButton from "../CreateButton/CreateButton.js"
-import Error404 from "../Error404/Error404.js"
-import styles from "./home.module.css"
-import image from "../../logo.png"
+import CreateButton from "../CreateButton/CreateButton.js";
+import Error404 from "../Error404/Error404.js";
+import styles from "./home.module.css";
+import image from "../../logo.png";
+
 
 
 export default function Home() {
@@ -28,9 +29,8 @@ export default function Home() {
 
   const indexOfLastRec = currentPage * recipesPerPage;
   const indexOfFirstRec = indexOfLastRec - recipesPerPage;
-  const recipesShown = allRecipes.length? allRecipes.slice(indexOfFirstRec, indexOfLastRec):allRecipes
+  const recipesShown = allRecipes.length? allRecipes.slice(indexOfFirstRec, indexOfLastRec): allRecipes
  
-  //acomodar Pagination
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber) 
   }
@@ -41,11 +41,12 @@ export default function Home() {
     window.location.reload(false)
   }
 
+
     return (
       <div>
         <div className={styles.encabezado}>
           <div className={styles.searchDiv}>
-            <Nav/>
+            <Nav paginate={paginate}/>
             <br/>
             <CreateButton/>
             <button className={styles.refresh} onClick={handleRefresh}>Refresh page</button>
